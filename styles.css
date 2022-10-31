@@ -88,6 +88,13 @@ main {
   gap: 0.8rem;
 }
 
+.tool-list-container {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
 /* BUTTON STYLES */
 .btn {
   background-color: var(--strong-cyan);
@@ -156,6 +163,35 @@ main {
   align-self: center;
 }
 
+/* WORKFLOW SECTION */
+.workflow {
+  margin-top: 5rem;
+}
+
+.tool-item {
+  text-align: center;
+  flex: 1 1 0;
+  margin-top: 3rem;
+}
+
+.company-logos {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-logos img {
+  justify-self: center;
+}
+
+/* DOWNLOAD SECTION BOTTOM */
+.download-section-bottom {
+  margin-top: 10rem;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 525px) {
@@ -210,6 +246,11 @@ main {
   .accessibility img {
     width: 100%;
   }
+
+  .tool-list-container {
+    flex-direction: column;
+    flex: 1 1 0;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -230,5 +271,10 @@ main {
 
   .accessibility img {
     width: 100%;
+  }
+
+  .tool-list-container {
+    flex-direction: column;
+    flex: 1 1 0;
   }
 }
