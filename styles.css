@@ -24,7 +24,7 @@ body {
   background-size: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 1.4rem; /* may cause 1st screen image to not align flush left - try remove padding on screen image block 1st or remove this line */
+  padding: 1.4rem, 0; /* may cause 1st screen image to not align flush left - try remove padding on screen image block 1st or remove this line */
   /* Or else remove the padding above and only add to mobile screen media query */
 }
 
@@ -61,6 +61,10 @@ header {
 
 main {
   margin-top: 9rem;
+}
+
+.top {
+  margin-top: 2.7rem;
 }
 
 .accessibility {
@@ -108,6 +112,10 @@ main {
   border-right: 1px solid hsl(171, 60%, 39%);
   border-left: 1px solid hsl(171, 60%, 39%);
   border-top: none;
+}
+
+.btn:hover {
+  opacity: 0.5;
 }
 
 .btn-cyan {
@@ -192,6 +200,57 @@ main {
   margin-top: 10rem;
 }
 
+/* FOOTER */
+
+.footer-container {
+  margin-top: 10rem;
+  background-color: hsla(0, 0%, 95%, 0.952);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 150px;
+}
+
+.footer-menu-flex {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 40%;
+  height: 75px;
+}
+
+.footer-container img {
+  width: 7%;
+}
+
+.footer-container a {
+  text-decoration: none;
+  color: var(--dark-grayish-blue);
+}
+
+.footer-container a:hover {
+  color: var(--strong-cyan);
+}
+
+.footer-menu-flex {
+  list-style: none;
+  text-decoration: none;
+  color: var(--dark-grayish-blue);
+}
+
+.social-icons-container {
+  width: 30%;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+}
+
+.social-icons-container i {
+  margin: 1rem;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 525px) {
@@ -225,6 +284,10 @@ main {
   .accessibility img {
     width: 100%;
   }
+
+  .footer-menu-flex {
+    column-gap: 1.5rem;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
@@ -251,6 +314,22 @@ main {
     flex-direction: column;
     flex: 1 1 0;
   }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-menu-flex {
+    height: 100%;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-container img {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -276,5 +355,21 @@ main {
   .tool-list-container {
     flex-direction: column;
     flex: 1 1 0;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-menu-flex {
+    height: 100%;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-container img {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 }
