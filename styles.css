@@ -291,10 +291,6 @@ main {
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-  body {
-    background-image: url('./images/bg-header-mobile.png');
-  }
-
   .features {
     grid-template-columns: 1fr;
     justify-items: center;
